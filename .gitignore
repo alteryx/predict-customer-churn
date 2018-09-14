@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Dask workers
+*/dask-worker-space/*
+
 # Data
 *.csv
 *.7z
