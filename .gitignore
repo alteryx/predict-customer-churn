@@ -13,7 +13,7 @@ __pycache__/
 *.tar
 *.gz
 *.pdf
-
+*.DS_Store
 # C extensions
 *.so
 
