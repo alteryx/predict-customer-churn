@@ -6,6 +6,9 @@ __pycache__/
 # Dask workers
 */dask-worker-space/*
 
+# Log files
+*/tmp/*
+
 # Data
 *.csv
 *.7z
