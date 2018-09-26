@@ -1,4 +1,0 @@
-{"Event":"SparkListenerLogStart","Spark Version":"2.3.1"}
-{"Event":"SparkListenerApplicationEnd","Timestamp":1537544495800}
-{"Event":"SparkListenerBlockManagerAdded","Block Manager ID":{"Executor ID":"driver","Host":"ip-172-31-8-174.ec2.internal","Port":33445},"Maximum Memory":384093388,"Timestamp":1537544495802,"Maximum Onheap Memory":384093388,"Maximum Offheap Memory":0}
-{"Event":"SparkListenerApplicationStart","App Name":"Pi","App ID":"spark-application-1537544435789","Timestamp":1537544435749,"User":"hadoop"}
