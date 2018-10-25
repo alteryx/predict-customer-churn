@@ -53,6 +53,13 @@ The final results comparing several models are shown below:
 | Auto-optimized Model                      | 0.709   | 0.15%  | 2.63%     | 0.0028   |
 | Auto-optimized Model Tuned for 50% Recall | 0.709   | 50%    | 3.30%     | 0.0617   |
 
+__Final Confusion Matrix__
+![](images/confusion_matrix_rf.png)
+
+__Feature Importances__
+
+![](images/most_important_rf.png)
+
 # Notebooks
 
 1. [Partitioning Data](https://github.com/FeatureLabs/customer-churn/blob/master/churn/1.%20Partitioning%20Data.ipynb)
