@@ -34,11 +34,11 @@ The dataset is provided by KKBOX, Asia's largest music streaming service, and ca
 
 Within the overall scaffolding, several standard data science toolboxes are used to solve the problem:
 
-* Featuretools: automated feature engineering
-* Pandas: data munging and engineering
-* Scikit-Learn: standard machine learning algorithms
-* Apache Spark with PySpark: Running comptutations in parallel
-* TPOT (Tree-based Pipeline Optimization Tool): model optimization using genetic algorithms
+* [Featuretools](https://docs.featuretools.com/#): automated feature engineering
+* [Pandas](https://pandas.pydata.org): data munging and engineering
+* [Scikit-Learn](http://scikit-learn.org/stable/documentation.html): standard machine learning algorithms
+* [Apache Spark](https://spark.apache.org/documentation.html) with [PySpark](https://spark.apache.org/docs/latest/api/python/index.html): Running comptutations in parallel
+* [TPOT (Tree-based Pipeline Optimization Tool)](https://github.com/EpistasisLab/tpot): model optimization using genetic algorithms
 
 # Results
 
@@ -53,13 +53,27 @@ The final results comparing several models are shown below:
 | Auto-optimized Model                      | 0.709   | 0.15%  | 2.63%     | 0.0028   |
 | Auto-optimized Model Tuned for 50% Recall | 0.709   | 50%    | 3.30%     | 0.0617   |
 
-<center>__Final Confusion Matrix__</center>
+__Final Confusion Matrix__
 
 ![](images/confusion_matrix_rf.png)
 
-<center>__Feature Importances__</center>
+__Feature Importances__
 
 ![](images/most_important_rf.png)
+
+# Feature Engineering with Spark
+
+To scale the feature engineering to a large dataset, the data was partitioned and automated feature engineering was run in parallel
+using Apache Spark with PySpark. 
+
+![](images/spark-logo-trademark.png)
+
+Featuretools supports scaling to multiple cores on one machine natively or to multiple machines using a Dask cluster. However, this
+approach shows that Spark can also be used to parallelize feature engineering resulting in reduced run times even on large datasets.
+
+![](images/featuretools-logo.png)
+
+The notebook [Feature Engineering on Spark](https://github.com/FeatureLabs/customer-churn/blob/master/churn/4.%20Feature%20Engineering%20on%20Spark.ipynb) demonstrates the procedure. The article [Featuretools on Spark](https://medium.com/feature-labs-engineering/featuretools-on-spark-e5aa67eaf807) documents the approach.
 
 # Notebooks
 
@@ -69,4 +83,14 @@ The final results comparing several models are shown below:
 4. [Feature Engineering on Spark](https://github.com/FeatureLabs/customer-churn/blob/master/churn/4.%20Feature%20Engineering%20on%20Spark.ipynb)
 5. [Modeling](https://github.com/FeatureLabs/customer-churn/blob/master/churn/5.%20Modeling.ipynb)
 
+## Feature Labs
 
+<p align="left">
+  <img src="images/FeatureLabs.png" width = "400" alt = "Feature Labs"/>
+</p>
+
+Featuretools was created by the developers at [Feature Labs](https://www.featurelabs.com/). If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.featurelabs.com/contact.html).
+
+### Contact
+
+Any questions can be directed to will.koehrsen@featurelabs.com
