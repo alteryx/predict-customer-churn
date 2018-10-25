@@ -1,9 +1,9 @@
-# Predicting Customer Churn with a Machine Learning Scaffolding
+# A Machine Learning Framework with an Application to Predicting Customer Churn
 
 ![](images/Framework.png)
 
 This project demonstrates applying a 3-step framework to solve problems with machine learning. The purpose of this framework
-is to provide a scaffolding for rapidly developing machine learning solutions.
+is to provide a standard scaffolding for rapidly developing machine learning solutions across industries and datasets.
 
 # Framework Steps
 
@@ -20,15 +20,27 @@ is to provide a scaffolding for rapidly developing machine learning solutions.
   * Use a pre-built solution with common libraries
   * Optimize model in line with business objectives
 
-Machine learning currently is an ad-hoc process requiring a custom solution to be built for each problem. Even for the same dataset,
-a slightly different prediction problem requires a solution to be built from scratch. This has made it too difficult for many companies
-to take advantage of the benefits of machine learning. A standardized procedure will make it easier to solve meaningful problems
-with machine learning, allowing an application of this transformative technology to a wider range of use-cases.
+Machine learning currently is an ad-hoc process requiring a custom solution for each problem. Even for the same dataset,
+a slightly different prediction problem requires an entire pipeline built from scratch. This has made it too difficult for many 
+companies to take advantage of the benefits of machine learning. The standardized procedure presented here will make it easier to solve 
+meaningful problemswith machine learning, allowing more companies to harness this transformative technology.
+
+# Application to Customer Churn
+
+The notebooks in this repository document a step-by-step application of the framework to a real-world use case and dataset - predicting
+customer churn. This is a critical need for subscription-based businesses and an ideal application of machine learning. 
+
+The dataset is provided by KKBOX, Asia's largest music streaming service, and can be downloaded [here](https://www.kaggle.com/c/kkbox-churn-prediction-challenge/data).
+
+Within the overall scaffolding, several standard data science toolboxes are used to solve the problem:
+
+* Featuretools: automated feature engineering
+* Pandas: data munging and engineering
+* Scikit-Learn: standard machine learning algorithms
+* Apache Spark with PySpark: Running comptutations in parallel
+* TPOT (Tree-based Pipeline Optimization Tool): model optimization using genetic algorithms
 
 # Results
-
-The notebooks document a step-by-step application of the framework to a real-world use case and dataset - predicting customer churn.
-This is a critical need for subscription-based businesses and an ideal application of machine learning. 
 
 The final results comparing several models are shown below:
 
