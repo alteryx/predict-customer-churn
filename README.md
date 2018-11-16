@@ -41,7 +41,7 @@ Within the overall scaffolding, several standard data science toolboxes are used
 * [Pandas](https://pandas.pydata.org): data munging and engineering
 * [Scikit-Learn](http://scikit-learn.org/stable/documentation.html): standard machine learning algorithms
 * [Apache Spark](https://spark.apache.org/documentation.html) with [PySpark](https://spark.apache.org/docs/latest/api/python/index.html): Running comptutations in parallel
-* [TPOT (Tree-based Pipeline Optimization Tool)](https://github.com/EpistasisLab/tpot): model optimization using genetic algorithms
+* [TPOT (Tree-based Pipeline Optimization Tool)](https://github.com/EpistasisLab/tpot): model selection optimization using genetic algorithms
 
 # Results
 
@@ -64,6 +64,18 @@ __Feature Importances__
 
 ![](images/most_important_rf.png)
 
+# Notebooks
+
+1. [Partitioning Data](https://github.com/FeatureLabs/customer-churn/blob/master/churn/1.%20Partitioning%20Data.ipynb): separate data
+into independent subsets to run operations in parallel.
+2. [Prediction Engineering](https://github.com/FeatureLabs/customer-churn/blob/master/churn/2.%20Prediction%20Engineering%20-%20Labeling.ipynb): create labels based on the business need and historical data.
+3. [Feature Engineering](https://github.com/FeatureLabs/customer-churn/blob/master/churn/3.%20Feature%20Engineering.ipynb): implement
+automated feature engineering workflow using label times and raw data
+4. [Feature Engineering on Spark](https://github.com/FeatureLabs/customer-churn/blob/master/churn/4.%20Feature%20Engineering%20on%20Spark.ipynb): parallelize feature engineering calculations by 
+distributing across multiple machines
+5. [Modeling](https://github.com/FeatureLabs/customer-churn/blob/master/churn/5.%20Modeling.ipynb): develop machine learning
+algorithms to predict labels from features; use automated genetic search tools to search for best model.
+
 # Feature Engineering with Spark
 
 To scale the feature engineering to a large dataset, the data was partitioned and automated feature engineering was run in parallel
@@ -79,18 +91,6 @@ approach shows that Spark can also be used to parallelize feature engineering re
 The notebook [Feature Engineering on Spark](https://github.com/FeatureLabs/customer-churn/blob/master/churn/4.%20Feature%20Engineering%20on%20Spark.ipynb) demonstrates the procedure. The article [Featuretools on Spark](https://medium.com/feature-labs-engineering/featuretools-on-spark-e5aa67eaf807) documents the approach.
 
 ![](images/distributed_architecture.png)
-
-# Notebooks
-
-1. [Partitioning Data](https://github.com/FeatureLabs/customer-churn/blob/master/churn/1.%20Partitioning%20Data.ipynb): separate data
-into independent subsets to run operations in parallel.
-2. [Prediction Engineering](https://github.com/FeatureLabs/customer-churn/blob/master/churn/2.%20Prediction%20Engineering%20-%20Labeling.ipynb): create labels based on the business need and historical data.
-3. [Feature Engineering](https://github.com/FeatureLabs/customer-churn/blob/master/churn/3.%20Feature%20Engineering.ipynb): implement
-automated feature engineering workflow using label times and raw data
-4. [Feature Engineering on Spark](https://github.com/FeatureLabs/customer-churn/blob/master/churn/4.%20Feature%20Engineering%20on%20Spark.ipynb): parallelize feature engineering calculations by 
-distributing across multiple machines
-5. [Modeling](https://github.com/FeatureLabs/customer-churn/blob/master/churn/5.%20Modeling.ipynb): develop machine learning
-algorithms to predict labels from features; use automated genetic search tools to search for best model.
 
 ## Feature Labs
 
