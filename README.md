@@ -1,16 +1,19 @@
 # A Machine Learning Framework with an Application to Predicting Customer Churn
 
-![](images/Framework.png)
+![](images/overall_framework.png)
 
-This project demonstrates applying a 3-step framework to solve problems with machine learning. The purpose of this framework
-is to provide a standard scaffolding for rapidly developing machine learning solutions across industries and datasets.
+This project demonstrates applying a 3 step general-purpose framework to solve problems with machine learning. The purpose of this 
+framework is to provide a scaffolding for rapidly developing machine learning solutions across industries and datasets.
+
+The end outcome is a both a specific solution to a customer churn use case, with a reduction in revenue lost to churn of more than 10%, 
+as well as a general approach you can use to solve your own problems with machine learning. 
 
 # Framework Steps
 
 1. __Prediction engineering__
   * State business need
-  * Translate business requirement into machine learning task
-  * Develop set of labels along with cutoff times for supervised machine learning prediction problem
+  * Translate business requirement into machine learning task by specifying problem parameters
+  * Develop set of labels along with cutoff times for supervised machine learning
 2. __Feature Engineering__
   * Create features - predictor variables - out of raw data 
   * Use cutoff times to make valid features for each label
@@ -21,9 +24,9 @@ is to provide a standard scaffolding for rapidly developing machine learning sol
   * Optimize model in line with business objectives
 
 Machine learning currently is an ad-hoc process requiring a custom solution for each problem. Even for the same dataset,
-a slightly different prediction problem requires an entire pipeline built from scratch. This has made it too difficult for many 
+a slightly different prediction problem requires an entirely new pipeline built from scratch. This has made it too difficult for many 
 companies to take advantage of the benefits of machine learning. The standardized procedure presented here will make it easier to solve 
-meaningful problemswith machine learning, allowing more companies to harness this transformative technology.
+meaningful problems with machine learning, allowing more companies to harness this transformative technology.
 
 # Application to Customer Churn
 
@@ -46,12 +49,12 @@ The final results comparing several models are shown below:
 
 | Model                                     | ROC AUC | Recall | Precision | F1 Score |
 |-------------------------------------------|---------|--------|-----------|----------|
-| Naive Baseline (no ml)                    | 0.5     | 3.54%  | 1.05%     | 0.0162   |
-| Logistic Regression                       | 0.567   | 0.19%  | 1.13%     | 0.0032   |
-| Random Forest Default                     | 0.709   | 35.9%  | 6.41%     | 0.1088   |
-| Random Forest Tuned for 50% Recall        | 0.709   | 50%    | 3.63%     | 0.0677   |
-| Auto-optimized Model                      | 0.709   | 0.15%  | 2.63%     | 0.0028   |
-| Auto-optimized Model Tuned for 50% Recall | 0.709   | 50%    | 3.30%     | 0.0617   |
+| Naive Baseline (no ml)                    | 0.5     | 3.47%  | 1.04%     | 0.016   |
+| Logistic Regression                       | 0.577   | 0.51%  | 2.91%     | 0.009   |
+| Random Forest Default                     | 0.929   | 65.2%  | 14.7%     | 0.240   |
+| Random Forest Tuned for 75% Recall        | 0.929   | 75%    | 8.31%     | 0.150    |
+| Auto-optimized Model                      | 0.927   | 2.88%  | 64.4%     | 0.055   |
+| Auto-optimized Model Tuned for 75% Recall | 0.927   | 75%    | 9.58%     | 0.170    |
 
 __Final Confusion Matrix__
 
