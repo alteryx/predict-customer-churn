@@ -102,4 +102,4 @@ Featuretools was created by the developers at [Feature Labs](https://www.feature
 
 ### Contact
 
-Any questions can be directed to will.koehrsen@featurelabs.com
+Any questions can be directed to help@featurelabs.com
