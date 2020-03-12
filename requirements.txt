@@ -37,7 +37,7 @@ conda==4.5.11
 conda-build==3.10.5
 conda-verify==2.0.0
 contextlib2==0.5.5
-cryptography==2.2.2
+cryptography==2.3
 cycler==0.10.0
 Cython==0.28.2
 cytoolz==0.9.0.1
